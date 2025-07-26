@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "gestor-doju",
+    "firebase functions:secrets:set API_TOKEN_DNI": "gestor-doju"
+  },
+  "targets": {},
+  "etags": {}
+}
