@@ -15,15 +15,14 @@ const LibsContext = createContext({ libsLoaded: false });
 const ToastContext = createContext({ showToast: () => {} });
 const NotificationContext = createContext({ showNotification: () => Promise.resolve(false) });
 
-// --- CONFIGURACIÓN E INICIALIZACIÓN DE FIREBASE ---
 const firebaseConfig = {
-    apiKey: "AIzaSyArzwnslCqhdk4WNREhckarKcQaywxI2jk",
-    authDomain: "gestor-doju.firebaseapp.com",
-    projectId: "gestor-doju",
-    storageBucket: "gestor-doju.firebasestorage.app",
-    messagingSenderId: "933106500168",
-    appId: "1:933106500168:web:3aeb61808e1d6d8dc04e7d",
-    measurementId: "G-SHXKW69ZBB"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 let app;
